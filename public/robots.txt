@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://oclawtrace.visieasy.com/sitemap.xml

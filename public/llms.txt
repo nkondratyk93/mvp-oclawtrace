@@ -1,0 +1,14 @@
+# OpenClaw Trace
+> See what your agents are actually doing.
+
+## What it does
+OpenClaw Trace is a free, open-source observability dashboard for OpenClaw multi-agent systems. It provides real-time monitoring of agent execution traces, token consumption, costs, and performance. Users can drill into individual heartbeats, compare runs side-by-side, set budget limits, and access all metrics via REST API. Runs with a single command: npx openclaw-trace.
+
+## Links
+- [Landing Page](https://oclawtrace.visieasy.com): Overview and features
+- [GitHub Repo](https://github.com/Tell-Me-Mo/openclaw-trace): Source code and installation
+- [Privacy Policy](https://oclawtrace.visieasy.com/privacy): Privacy and data handling
+- [Terms of Service](https://oclawtrace.visieasy.com/terms): Terms and conditions
+
+## Built by
+visieasy.com - instant MVPs for real problems

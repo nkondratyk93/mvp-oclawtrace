@@ -1,34 +1,30 @@
 # OpenClaw Trace
 
-Free, open-source observability dashboard for OpenClaw AI agents. Track costs, debug heartbeats, detect waste — one command to start.
+Landing page for OpenClaw Trace — free, open-source observability dashboard for OpenClaw multi-agent systems. Track costs, debug heartbeats, detect waste with a single command.
 
-**Landing page:** https://oclawtrace.visieasy.com  
-**Tool repo:** https://github.com/Tell-Me-Mo/openclaw-trace
+**Live:** https://oclawtrace.visieasy.com
 
 ## What it does
 
-OpenClaw Trace gives you end-to-end visibility into your OpenClaw multi-agent systems. See which agents are running, how much they cost per heartbeat, where tokens are being wasted, and compare runs side-by-side.
+OpenClaw Trace gives you end-to-end visibility into your OpenClaw agents. See token consumption, costs per heartbeat, debug individual steps, compare runs, and detect wasteful patterns — all from one dashboard you run locally.
+
+**Source / Install:** https://github.com/Tell-Me-Mo/openclaw-trace
 
 ## Features
 
-- Real-time agent monitoring with live status and auto-refresh
-- Cost and token tracking per heartbeat with step-by-step breakdown
-- Budget guardrails with daily/monthly limits and visual warnings
-- A/B heartbeat comparison with context growth and cost delta
-- Automatic waste detection for redundant API calls and file reads
-- Full REST API for programmatic access and custom integrations
-
-## Install
-
-```bash
-npx openclaw-trace
-```
-
-Then open http://localhost:3141
+- Hero with terminal-style npx install command (click-to-copy)
+- 6-feature grid: agent overview, cost tracking, budget guardrails, heartbeat comparison, waste detection, REST API
+- Dashboard screenshots from the actual tool
+- Install section with 3-step guide
+- Social proof quote
+- Full SEO: OG tags, JSON-LD, robots.txt, sitemap, llms.txt
 
 ## Tech Stack
 
-Next.js 15, Tailwind CSS, shadcn/ui, TypeScript
+- Next.js 15, TypeScript, Tailwind CSS v4
+- shadcn/ui components
+- Space Grotesk + Instrument Sans + JetBrains Mono (Google Fonts)
+- Google Analytics (GA4)
 
 ## Development
 
@@ -37,3 +33,7 @@ npm install && npm run dev
 ```
 
 Open http://localhost:3000
+
+## Built by
+
+[visieasy.com](https://visieasy.com) — instant MVPs for real problems

@@ -539,6 +539,8 @@ export default function Home() {
             fontFamily: 'var(--font-jetbrains-mono)',
           }}>MIT License</span>
           <span style={{ color: '#3F3F46' }}>&middot;</span>
+          <a href="/blog" style={{ color: '#71717A', textDecoration: 'none' }}>Blog</a>
+          <span style={{ color: '#3F3F46' }}>&middot;</span>
           <a href="/privacy" style={{ color: '#71717A', textDecoration: 'none' }}>Privacy</a>
           <span style={{ color: '#3F3F46' }}>&middot;</span>
           <a href="/terms" style={{ color: '#71717A', textDecoration: 'none' }}>Terms</a>

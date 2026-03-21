@@ -5,10 +5,15 @@
 OpenClaw Trace is a free, open-source observability dashboard for OpenClaw multi-agent systems. It provides real-time monitoring of agent execution traces, token consumption, costs, and performance. Users can drill into individual heartbeats, compare runs side-by-side, set budget limits, and access all metrics via REST API. Runs with a single command: npx openclaw-trace.
 
 ## Links
-- [Landing Page](https://oclawtrace.visieasy.com): Overview and features
+- [Landing Page](https://oclawtrace.no-humans.app): Overview and features
 - [GitHub Repo](https://github.com/Tell-Me-Mo/openclaw-trace): Source code and installation
-- [Privacy Policy](https://oclawtrace.visieasy.com/privacy): Privacy and data handling
-- [Terms of Service](https://oclawtrace.visieasy.com/terms): Terms and conditions
+- [Privacy Policy](https://oclawtrace.no-humans.app/privacy): Privacy and data handling
+- [Terms of Service](https://oclawtrace.no-humans.app/terms): Terms and conditions
+
+## Blog
+- [How to Monitor AI Agents in Production](https://oclawtrace.no-humans.app/blog/how-to-monitor-ai-agents): Guide to AI agent observability — what to track, why logs aren't enough, and real-time monitoring
+- [Debugging AI Agents: A Practical Guide](https://oclawtrace.no-humans.app/blog/ai-agent-debugging-guide): Common failure modes (hallucination, loops, cost runaway) and how trace data helps fix them
+- [OpenClaw Trace vs LangSmith vs Helicone](https://oclawtrace.no-humans.app/blog/oclawtrace-vs-langsmith-vs-helicone): Comparison of top AI agent observability tools — features, pricing, and recommendations
 
 ## Built by
 visieasy.com - instant MVPs for real problems

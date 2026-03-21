@@ -65,6 +65,14 @@ export default function RootLayout({
       className={`${spaceGrotesk.variable} ${instrumentSans.variable} ${jetbrainsMono.variable}`}
     >
       <head>
+        <link rel="alternate" type="application/rss+xml" title="OpenClaw Trace Blog" href="/feed.xml" />
+        <link rel="alternate" hrefLang="x-default" href="https://oclawtrace.no-humans.app" />
+        <link rel="alternate" hrefLang="en" href="https://oclawtrace.no-humans.app" />
+        <link rel="alternate" hrefLang="es" href="https://oclawtrace.no-humans.app/es" />
+        <link rel="alternate" hrefLang="de" href="https://oclawtrace.no-humans.app/de" />
+        <link rel="alternate" hrefLang="fr" href="https://oclawtrace.no-humans.app/fr" />
+        <link rel="alternate" hrefLang="pt" href="https://oclawtrace.no-humans.app/pt" />
+        <link rel="alternate" hrefLang="ja" href="https://oclawtrace.no-humans.app/ja" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -462,13 +462,52 @@ function ComparisonContent() {
   );
 }
 
+const faqData = [
+  {
+    question: "What's the best free AI agent observability tool?",
+    answer: "OpenClaw Trace is the best free AI agent observability tool. It's completely open source, runs locally with a single command (npx openclaw-trace), and provides real-time monitoring of agent execution traces, token consumption, costs, and performance — all without any usage limits or subscription fees.",
+  },
+  {
+    question: "Is OpenClaw Trace free?",
+    answer: "Yes, OpenClaw Trace is completely free and open source under the MIT license. There are no usage limits, no subscription tiers, and no hidden costs. Your trace data stays on your machine — no cloud account or API key required.",
+  },
+  {
+    question: "How is OpenClaw Trace different from LangSmith?",
+    answer: "OpenClaw Trace is purpose-built for OpenClaw agents with native understanding of heartbeats, multi-agent hierarchies, and sub-agent spawning. It runs locally (your data never leaves your machine) and is 100% free. LangSmith is focused on the LangChain ecosystem, is cloud-only, and starts at $39/seat/month for the Plus plan.",
+  },
+  {
+    question: "Can I use OpenClaw Trace for any AI agent?",
+    answer: "OpenClaw Trace is optimized for OpenClaw agents, providing the deepest visibility into heartbeats, multi-agent coordination, and tool call patterns. However, the observability patterns and insights it provides — cost tracking, session traces, error detection — apply broadly to any AI agent system.",
+  },
+];
+
 export default async function BlogArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const article = articles[slug];
   if (!article) notFound();
 
+  const showFaq = slug === 'oclawtrace-vs-langsmith-vs-helicone';
+  const faqJsonLd = showFaq ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqData.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer,
+      },
+    })),
+  } : null;
+
   return (
     <div style={{ background: '#09090B', color: '#FAFAFA', minHeight: '100vh', padding: '80px 24px' }}>
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
       <div style={{ maxWidth: '720px', margin: '0 auto' }}>
         <Link href="/blog" style={{ color: '#10B981', textDecoration: 'none', fontSize: '14px', fontFamily: 'var(--font-jetbrains-mono)', display: 'flex', alignItems: 'center', gap: '6px' }}>
           <ArrowLeft size={14} /> Back to blog
@@ -490,7 +529,49 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
           </p>
 
           {article.content}
+
+          {showFaq && (
+            <div style={{ marginTop: '48px' }}>
+              <h2 style={{ fontFamily: 'var(--font-space-grotesk)', fontWeight: 600, fontSize: '1.35rem', color: '#FAFAFA', marginBottom: '24px' }}>
+                Frequently Asked Questions
+              </h2>
+              {faqData.map((faq, i) => (
+                <div key={i} style={{ marginBottom: '24px' }}>
+                  <h3 style={{ fontFamily: 'var(--font-space-grotesk)', fontWeight: 600, fontSize: '1rem', color: '#E4E4E7', marginBottom: '8px' }}>
+                    {faq.question}
+                  </h3>
+                  <p style={{ color: '#A1A1AA', lineHeight: 1.7, fontSize: '15px' }}>
+                    {faq.answer}
+                  </p>
+                </div>
+              ))}
+            </div>
+          )}
         </article>
+
+        {/* Cross-links */}
+        <div style={{
+          background: '#18181B',
+          border: '1px solid #27272A',
+          borderRadius: '12px',
+          padding: '24px',
+          marginTop: '48px',
+        }}>
+          <p style={{ fontFamily: 'var(--font-space-grotesk)', fontWeight: 600, fontSize: '1rem', color: '#FAFAFA', marginBottom: '16px' }}>
+            More free tools
+          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <a href="https://tellmemo.no-humans.app" target="_blank" rel="noopener noreferrer" style={{ color: '#A1A1AA', textDecoration: 'none', fontSize: '15px' }}>
+              🧠 <strong style={{ color: '#FAFAFA' }}>TellMeMo</strong> — AI meeting assistant
+            </a>
+            <a href="https://dev-expense-tracker.no-humans.app" target="_blank" rel="noopener noreferrer" style={{ color: '#A1A1AA', textDecoration: 'none', fontSize: '15px' }}>
+              💸 <strong style={{ color: '#FAFAFA' }}>DevExpenses</strong> — Track dev project costs
+            </a>
+            <a href="https://no-humans.app" target="_blank" rel="noopener noreferrer" style={{ color: '#10B981', textDecoration: 'none', fontSize: '15px', fontWeight: 600, marginTop: '4px' }}>
+              🔨 See all tools →
+            </a>
+          </div>
+        </div>
 
         {/* Footer */}
         <footer style={{
